@@ -1,0 +1,18 @@
+.btn{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all .15s ease;
+}
+
+.btn-default{
+    background-color: var(--btn-default);
+    border: 3px solid var(--default-color);
+}
+
+.btn-default:hover{
+    background-color: var(--default-color);
+    color: #fff;
+}

@@ -1,0 +1,70 @@
+.btn {
+    padding: 10px 20px;
+    position: relative;
+    margin: 3px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.underline-title {
+    border-bottom: 2px solid #0d6efd;
+    width: 300px;
+    margin: auto;
+}
+
+.title-1 {
+    font-size: 56px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.title-2 {
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.title-3 {
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.p-1 {
+    font-size: 17px;
+}
+
+.text-size-3{
+    font-size: 26px;
+}
+
+.margin-top-20{
+    margin-top: 120px;
+}

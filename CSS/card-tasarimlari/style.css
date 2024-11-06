@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 25px auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    margin: 5px;
+    border-radius: 14px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.card-primary {
+    color: white;
+    background: rgb(17, 31, 68);
+    background: linear-gradient(0deg, rgba(17, 31, 68, 1) 0%, rgba(20, 35, 86, 1) 12%, rgba(32, 53, 167, 1) 100%);
+}
+
+.card-text {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 50px 50px;
+    text-align: left;
+}
+
+.card-text h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+.card-text p{
+    font-size: 1.5rem;
+}
+
+.card-icon {
+    position: absolute;
+    right: 0;
+    margin: -40px -5px 0 0;
+    font-size: 10rem;
+    transform: rotate(30deg);
+}
+
+.card-warning {
+    color: white;
+    background: rgb(152, 123, 26);
+    background: linear-gradient(0deg, rgba(152, 123, 26, 1) 0%, rgba(177, 143, 25, 1) 12%, rgba(240, 187, 7, 1) 100%);
+}
+
+.card-danger {
+    color: white;
+    background: rgb(154,5,5);
+    background: linear-gradient(0deg, rgba(154,5,5,1) 0%, rgba(179,6,6,1) 12%, rgba(255,0,0,1) 100%);
+}

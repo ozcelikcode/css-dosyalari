@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+    <div class="nav">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                <img src="img/pexels.png" alt="logo">
+                <a href="#" class="logo-text">Pexels</a>
+            </div>
+            <div class="menu">
+                <a href="#">Keşfet</a>
+                <a href="#">Lisans</a>
+                <a href="#">Yükle</a>
+                <a href="#" style="font-size: 8px;">&#9679; &#9679; &#9679;</a>
+                <button class="btn btn-light">Katıl</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="header-img">
+
+        <div class="header-box">
+            <h1>
+                İçerik üreticiler tarafından paylaşılan en iyi ücretsiz stok fotoğraflar, telifsiz görseller ve
+                videolar.
+            </h1>
+
+            <input type="text" class="search-box" placeholder="Ücretsiz fotoğraf arayın">
+
+            <div class="rise"><span>Yükseliştekiler :</span> araba, doğa, doku, gün batımı, karanlık</div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="header-menu">
+            <a href="" class="active">Ana Sayfa</a>
+            <a href="">Videolar</a>
+            <a href="">Lider Sıralaması</a>
+            <a href="">Yarışmalar</a>
+        </div>
+
+        <h1 class="title">Ücretsiz Stok Fotoğraflar</h1>
+
+        <div class="gallery">
+            <div>
+                <img src="img/pexels/1.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/2.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/3.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/4.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/5.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/6.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/7.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/8.jpg">
+            </div>
+
+            <div>
+                <img src="img/pexels/9.jpg">
+            </div>
+
+        </div>
+
+        <footer>
+            <div>
+                <p>2022 &copy; All Rights Reserved. Coding by ozcelikcode</p>
+            </div>
+            <div>instagram | facebook | twitter</div>
+        </footer>
+
+    </div>
+
+    <script>
+        var navbar = document.querySelector('.nav')
+
+        window.onscroll = function () {
+
+            // pageYOffset or scrollY
+            if (window.pageYOffset > 0) {
+                navbar.classList.add('scrolled')
+            } else {
+                navbar.classList.remove('scrolled')
+            }
+        }
+    </script>
+
+</body>
+
+</html>

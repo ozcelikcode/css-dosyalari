@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    ::selection {
+        background: hotpink;
+        color: #fff;
+    }
+
+    .container {
+        width: 50%;
+        height: 1500px;
+        margin: 25px auto;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box-static {
+        background: tomato;
+        color: #fff;
+        position: static;
+    }
+
+    .box-relative {
+        background: chocolate;
+        color: #fff;
+        position: relative;
+        left: 50px;
+        top: 20px;
+    }
+
+    .box-fixed {
+        background: slateblue;
+        color: #fff;
+        position: fixed;
+        padding: 5px;
+    }
+
+    .box-absolute {
+        background: violet;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .box-sticky {
+        background: teal;
+        color: #fff;
+        position: sticky;
+        top: 20px;
+    }
+
+    .container2 {
+        width: 50%;
+        margin: 150px auto 50px;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .b1 {
+        background: hotpink;
+        position: absolute;
+        right: 0;
+    }
+
+    .container3 {
+        width: 50%;
+        margin: 150px auto 50px;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+    }
+
+    .b2 {
+        background: steelblue;
+        color: #fff;
+        position: absolute;
+        right: 0;
+    }
+
+    .b3 {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background: #000;
+    }
+
+    .b3 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+
+    <h2>Sayfayı en aşağı kaydır farkı gör. tarih: 01.07.2022</h2>
+
+    <div class="container">
+        <div class="box box-static">Static</div>
+        <div class="box box-relative">Relative</div>
+        <div class="box box-fixed">Fixed</div>
+        <div class="box box-absolute">Absolute</div>
+        <div class="box box-sticky">Sticky</div>
+    </div>
+
+
+    <h1>Static : sabit bir şekilde yerinde durur. varsayılan değerdir ver ya da verme aynı şey</h1>
+    <h1>Relative : static gibi yerinde durur fakat -> top, bottom, left, right değerleri verebilirsin. verdiğinde kendi
+        yerinden başka bir yere kayar.</h1>
+    <h1>Absolute : havada kalır ve üstünde bir değer varsa z-index kullanmalısın. ve top, left, right, bottom değerleri
+        kullanabilirsin. Yerinde kalmaya devam eder.</h1>
+    <h1>Fixed : static gibi yerinde durur ve absolute gibi havada kalır. Ayriyeten sayfada "hep" seni takip eder.</h1>
+    <h1>Sticky : sabit bir şekilde yerinde durur. sayfayı kaydırmaya devam edince sayfanın üst (alt,sağ,sol da olabilir)
+        tarafını tutar ve seni takip eder. Yerine gelince de fixed gibi takip etmeye devam etmez yerine oturur uslu
+        uslu. :D</h1>
+
+    <h1 style="font-size: 40px; text-align: center;">Absolute Sorunu Çözümü</h1>
+
+    <div class="container2">
+        <h2>container'a position relative verilmez ise absolute hiçbir şey dinlemez ve nesnelerin içinden geçer </h2>
+        <div class="box b1">absolute</div>
+    </div>
+
+    <div class="container3">
+        <h2>container'a position relative verilirse relative onu tutar ve içinden geçemez.</h2>
+        <div class="box b2">absolute</div>
+    </div>
+
+    <br><br><br>
+
+    <h1>Herhangi bir nesneyi transform ile ortalama</h1>
+
+    <p>Text için absolute değeri verip top: 50% ve left: 50% verince tam olmuyor o yüzden transform özelliği ile halledebiliyoruz. transform: translate(-50%, -50%) yazarak tam ortalayabilirsin istediğin nesneyi.</p>
+
+    <div class="b3">
+        <h1>Text</h1>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+:root{
+    --link-color: #dedede;
+    --default-bg-color: #ebebfd;
+    --default-color: #1A28FF;
+    /* Button */
+    --btn-default: var(--default-bg-color);
+    --btn-df-border: var(--default-color);
+}

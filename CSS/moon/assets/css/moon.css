@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    top: 0;
+    position: fixed;
+    font-size: 18px;
+    width: 100%;
+    padding: 20px 140px;
+    z-index: 5;
+    background: transparent;
+    backdrop-filter: blur(16px);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-menu a {
+    margin-left: 15px;
+    color: rgba(255, 255, 255, 0.548);
+    font-weight: 300;
+    transition: color .25s ease;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+.s1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/img/stars2.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.s1-title {
+    line-height: 50px;
+    font-size: 32rem;
+    font-weight: 600;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moon-img {
+    width: 20rem;
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.moon-img img {
+    width: 100%;
+}
+
+.s2 {
+    width: 100%;
+    background-image: url("/assets/img/stars2.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 0;
+    color: #fff;
+    position: relative;
+}
+
+.s2 .moon-img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.s2-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.s2-container .item {
+    flex-grow: 1;
+    height: 100vh;
+    max-width: 50%;
+    position: relative;
+}
+
+.info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.info-title{
+    font-size: 10rem;
+    margin-bottom: -20px;
+}
+
+.info-text{
+    font-size: 2.5rem;
+}
+
+/* SCROLL MOUSE */
+
+@-webkit-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@-moz-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+.scroll-btn {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.scroll-btn>* {
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #7f8c8d;
+    color: #ffffff;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.scroll-btn>*:hover,
+.scroll-btn>*:focus,
+.scroll-btn>*.active {
+    color: #ffffff;
+}
+
+.scroll-btn>*:hover,
+.scroll-btn>*:focus,
+.scroll-btn>*:active,
+.scroll-btn>*.active {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.scroll-btn .mouse {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 55px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 23px;
+}
+
+.scroll-btn .mouse>* {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: white;
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    -moz-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
+}
+
+/* SCROLL MOUSE */

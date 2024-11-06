@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ::selection {
+        background-color: hotpink;
+        color: #fff;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .info-box {
+        padding: 20px;
+        margin: 50px auto;
+        border: 3px solid black;
+        border-radius: 12px;
+    }
+
+    .info-con {
+        margin-bottom: 30px;
+    }
+
+    .info-box-title {
+        font-weight: 600;
+        display: inline-block;
+        font-size: 26px;
+    }
+
+    .info-box-title::after {
+        content: ' : ';
+    }
+
+    .info-box-p {
+        display: inline-block;
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .ornek {
+        color: #fff;
+        background: #000;
+        padding: 10px;
+    }
+
+    .title {
+        margin: 20px 0 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+    .box-title {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        text-align: center;
+    }
+
+    /* Transitions */
+
+    .box-1 {
+        background-color: mediumpurple;
+        transition-property: background-color;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in;
+    }
+
+    .box-1:hover {
+        background-color: red;
+    }
+
+    .box-2 {
+        background-color: indigo;
+        transition: background-color 500ms, border-radius 500ms ease;
+    }
+
+    .box-2:hover{
+        background-color: hotpink;
+        border-radius: 50%;
+    }
+
+    .box-3{
+        background-color: cornflowerblue;
+        transition: all 500ms ease;
+        transition-delay: 2s;
+    }
+
+    .box-3:hover{
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="info-box">
+            <div class="info-con">
+                <h2 class="info-box-title">transition-property</h2>
+                <p class="info-box-p">
+                    Hangi sınıfa etki etsin. Örnek : <span class="ornek">background-color</span>
+                    ya da <span class="ornek">all</span>
+                </p>
+            </div>
+
+            <div class="info-con">
+                <h2 class="info-box-title">transition-duration</h2>
+                <p class="info-box-p">
+                    Kaç saniyede bu etki sürsün. Örnek : <span class="ornek">500ms</span> > yarım saniye ya da <span
+                        class="ornek">1s</span> > 1 saniye
+                </p>
+            </div>
+
+            <div class="info-con">
+                <h2 class="info-box-title">transition-timing-function</h2>
+                <p class="info-box-p">
+                    Saniyede ne kadar hızlı olsun. <span class="ornek">ease</span> > 1 saniye normal hızda ya da <span
+                        class="ornek">ease-in-out</span> > önce yavaş başlayıp sonra hızla gider. Kaç saniye verdiysen o
+                    kadar sürede sürer! Saniyede oynamalar olmaz.
+                </p>
+            </div>
+
+            <div class="info-con">
+                <h2 class="info-box-title">transition-delay</h2>
+                <p class="info-box-p">
+                    transition özelliği çalışmadan bir süre aralığında bekletir. <span class="ornek">transition-delay: 2s;</span> > 2 saniye boyunca bekletir ondan sonra background-color isteği çalışır.
+                </p>
+            </div>
+
+            <div class="info-con">
+                <h2 class="info-box-title">transition: etki süre hız;</h2>
+                <p class="info-box-p">
+                    Transition özelliğini toplu bir şekilde kullanabilirsin. <span class="ornek">transition:
+                        background-color 500ms ease-in-out;</span>
+                </p>
+            </div>
+
+        </div>
+
+        <h2 class="title">
+            Ayrı ayrı kullanabilirsin. <span class="ornek">transition-property: background-color;</span> <span class="ornek">transition-duration:
+                500ms;</span> <br><br> <span class="ornek">transition-timing-function: ease-in-out</span>
+        </h2> <br>
+        <div class="box box-1">
+            <span class="box-title">Ayrı Ayrı Kullanımı</span>
+        </div>
+
+        <br><br>
+
+        <h2 class="title">
+            Aynı anda özellikleri beraber kullanabilirsin. <br><br> <span class="ornek">transition: background-color 500ms, border-radius 500ms ease;</span> <br><br>
+        </h2>
+
+        <div class="box box-2">
+            <span class="box-title">Özellikleri beraber kullanma</span>
+        </div>
+
+
+        <h2 class="title">
+            <span class="ornek">transition-delay</span> sayesinde nesnenin üzerine gelince seni belirttiğin saniye kadar bekletir.
+        </h2>
+
+        <div class="box box-3">
+            <span class="box-title">transition-delay</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Select Kullanımı</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box div {
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .ornek-1 {
+            user-select: text;
+        }
+
+        .ornek-2 {
+            user-select: none;
+        }
+
+        .ornek-3 {
+            user-select: all;
+        }
+
+        .ornek-4 {
+            user-select: contain;
+        }
+
+        .ornek-5 {
+            user-select: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+
+            <p><b>user-select</b> özelliği, bir metnin seçilip seçilmeyeceğini belirler.</p>
+
+            <div class="ornek-1"><b>user-select : text</b> -> Bu metin seçilebilir.</div>
+
+            <div class="ornek-2"><b>user-select : none</b> -> Bu metin seçilemez.</div>
+
+            <div class="ornek-3"><b>user-select : all</b> -> Bu metnin her yeri seçilir.</div>
+
+            <div class="ornek-4"><b>user-select : contain</b> -> Bu metin seçilebilir.</div>
+
+            <div class="ornek-5"><b>user-select : auto</b> -> Bu metin seçilebilir.</div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

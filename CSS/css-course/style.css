@@ -1,0 +1,122 @@
+/* Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin: 0px auto 25px;
+    width: 50%;
+}
+
+.header {
+    padding: 20px;
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 0px 0px 8px 8px;
+    margin-bottom: 25px;
+    align-items: center;
+    display: flex;
+}
+
+.header h1 {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.header h3 {
+    font-weight: 400;
+}
+
+.box {
+    background: #fff;
+    border-radius: 8px;
+    height: 500px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.minibox {
+    padding: 10px;
+    background: rgba(78, 174, 78, 0.597);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.minibox:hover {
+    background: rgba(78, 174, 78, 0.753);
+}
+
+
+.minibox h1 {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
+/* page */
+
+.content-title {
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.cbox {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.tc {
+    margin: 25px auto;
+    width: 95%;
+}
+
+#code {
+    background:#15141B;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 10px;
+    height: auto;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.c0{
+    color: #54C59F;
+}
+
+.c{
+    color: #8464C6;
+}
+
+.c1{
+    color: #c16ea2;
+}
+
+.c2{
+    color: gray;
+}
+
+.c3{
+    color: #54C59F;
+}

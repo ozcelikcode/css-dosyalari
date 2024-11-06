@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content ve Align iTems</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 25px;
+    }
+
+    .container {
+        width: 50%;
+        margin: auto;
+    }
+
+    .title {
+        text-align: center;
+        margin: 50px 0 10px;
+    }
+
+    .fc {
+        padding: 20px;
+        background: #898AA6;
+        display: flex;
+    }
+
+    .item {
+        background: #E4DCCF;
+        padding: 15px;
+        margin: 0 10px 10px 0;
+    }
+
+    .flex-container {
+        justify-content: center;
+    }
+
+    .flex-container2 {
+        justify-content: left;
+    }
+
+    .flex-container3 {
+        justify-content: right;
+    }
+
+    .flex-container4 {
+        justify-content: end;
+    }
+
+    .flex-container5 {
+        justify-content: flex-start;
+    }
+
+    .flex-container6 {
+        justify-content: flex-end;
+    }
+
+    .flex-container7 {
+        justify-content: space-around;
+    }
+
+    .flex-container8 {
+        justify-content: space-between;
+    }
+
+    .flex-container9 {
+        justify-content: space-evenly;
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title">justify-content: center; - Özelliği</h2>
+        <div class="fc flex-container">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: left; - Özelliği</h2>
+        <div class="fc flex-container2">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: right; - Özelliği</h2>
+        <div class="fc flex-container3">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: end; - Özelliği</h2>
+        <div class="fc flex-container4">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: flex-start; - Özelliği</h2>
+        <div class="fc flex-container5">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: flex-end; - Özelliği</h2>
+        <div class="fc flex-container6">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: space-around; - her aradan eşit boşluk verir</h2>
+        <div class="fc flex-container7">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: space-between; - yan taraflardan boşluk vermez sadece aralardan boşluk verir.
+            yan taraflardan boşluk olmasının sebebi padding kullanmam.</h2>
+        <div class="fc flex-container8">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">justify-content: space-evenly; - yanlardan daha fazla boşluk bırakıp aralardaki boşlukları
+            azaltır.</h2>
+        <div class="fc flex-container9">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

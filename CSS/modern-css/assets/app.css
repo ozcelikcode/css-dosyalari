@@ -1,0 +1,48 @@
+:root{
+    &:has(input[name="color-scheme"][value="system"]:checked){
+        color-scheme: light dark;
+    }
+
+    &:has(input[name="color-scheme"][value="dark"]:checked){
+        color-scheme: dark;
+    }
+
+    &:has(input[name="color-scheme"][value="light"]:checked){
+        color-scheme: light;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: Canvas;
+    color: CanvasText;
+    font-family: Tahoma, sans-serif;
+}
+
+.heading{
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.logo-title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

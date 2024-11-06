@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #161515;
+}
+
+h2 {
+    margin: 20px 0 10px;
+}
+
+a{
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #0062ca;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.box {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.box p {
+    font-size: 18px;
+    line-height: 32px;
+    color: #908f8f;
+    margin: 20px 0;
+}
+
+b {
+    color: slateblue;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content Kullanımı</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .ornek-1::after{
+            content: 'Haberin Devamını Oku >';
+            color: #fff;
+            padding: 3px;
+            border-radius: 3px;
+            background-color: #0062ca;
+        }
+
+        .ornek-2::before{
+            content: 'Haberi Okuyun =>';
+            color: #fff;
+            padding: 3px;
+            border-radius: 3px;
+            background-color: #0062ca;
+        }
+
+        .ornek-3::after{
+            content: none;
+        }
+
+        .ornek-4 p{
+            counter-increment: sayi; /* sayıcı ismi giriyoruz */
+        }
+
+        .ornek-4 p::before{
+            content: counter(sayi); /* burada kullanıyoruz */
+        }
+
+        .ornek-5::after{
+            content: attr(href);
+        }
+
+        .ornek-5-1::after{
+            content: attr(deneme);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            
+            <h2>ornek-1::after</h2>
+            <p class="ornek-1">Mardinde Freni Patlayan Tırın Şoförü Tutuklandı. Olaya ilişkin [...] </p>
+            
+            <h2>ornek-2::before</h2>
+            <p class="ornek-2"> Mardinde Freni Patlayan Tırın Şoförü Tutuklandı.</p>
+            
+            <h2>ornek-3 -> content : none</h2>
+            <p class="ornek-3">Mardinde Freni Patlayan Tırın Şoförü Tutuklandı. </p>
+            
+            <h2>Counter</h2>
+            <div class="ornek-4">
+                <p> Lorem ipsum dolor sit amet.</p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p> Lorem ipsum dolor sit.</p>
+                <p> Lorem ipsum dolor.</p>
+            </div>
+
+            <h2>Attr() = attr() özelliği, belirtilen bir özniteliğin değerini seçilen öğe(ler)den önce veya sonra ekler.</h2>
+            <a href="https://www.yazilimokulum.com/" target="_blank" class="ornek-5">Link İçeriği : </a>
+            <p class="ornek-5-1" deneme=" : tıkla!">Bu haberin devamı için</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

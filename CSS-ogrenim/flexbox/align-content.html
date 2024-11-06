@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-Content Kullanımı</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 60%;
+        margin: 25px auto;
+
+    }
+
+    .alert {
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+    }
+
+    .alert-warning {
+        background: rgba(245, 245, 15, 0.76);
+    }
+
+    .title {
+        font-size: 26px;
+        margin: 20px 0 10px;
+    }
+
+    .flex {
+        /* önemli olanlar */
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        /* önemli olanlar */
+        padding: 20px;
+        margin-bottom: 30px;
+        background: rgba(98, 98, 98, 0.785);
+        height: 400px;
+
+    }
+
+    .flex-container {
+
+        align-content: flex-start;
+    }
+
+    .flex-container2 {
+        align-content: flex-end;
+    }
+
+    .flex-container3 {
+        align-content: space-around;
+    }
+
+    .flex-container4 {
+        align-content: space-between;
+    }
+
+    .flex-container5 {
+        align-content: space-evenly;
+    }
+
+    .flex-container6 {
+        align-content: stretch;
+    }
+
+
+    .item {
+        color: #fff;
+        background: #333;
+        padding: 20px;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title">gap: 20px vererek aralarındaki boşluğu ayarlamış oluyoruz. Gap sayesinde margin değerine gerek
+            kalmıyor</h2>
+
+        <h2 class="title">flex-container'a eğerki - align-content: center; - verirsem dikeyde ortalama olur.</h2>
+
+        <h2 class="title">Bu boxlara justify-content center da verebilirsin.</h2>
+
+        <h2 class="title">Sonuçları görmek istiyorsan ekranı küçült ve farkı gör.</h2>
+
+        <h2 class="title">Flex elementine align-content, flex-wrap, gap uygulandı</h2>
+
+        <hr>
+
+        <h2 class="title">align-content: flex-start</h2>
+        <div class="flex flex-container">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+        </div>
+
+        <h2 class="title">align-content: flex-end</h2>
+
+        <div class="flex flex-container2">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+        </div>
+
+        <h2 class="title">align-content: space-around</h2>
+
+        <div class="flex flex-container3">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+        </div>
+
+        <h2 class="title">align-content: space-between</h2>
+
+        <div class="flex flex-container4">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+        </div>
+
+        <h2 class="title">align-content: space-evenly</h2>
+
+        <div class="flex flex-container5">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+        </div>
+
+        <h2 class="title">align-content: stretch</h2>
+
+        <div class="flex flex-container6">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+        </div>
+
+</body>
+
+</html>

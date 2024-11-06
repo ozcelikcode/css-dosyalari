@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PlusJakartaSans', sans-serif;
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans Light';
+    src: url('/fonts/PlusJakartaDisplay-Light.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url('/fonts/PlusJakartaDisplay-Regular.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans Medium';
+    src: url('/fonts/PlusJakartaDisplay-Medium.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans Bold';
+    src: url('/fonts/PlusJakartaDisplay-Bold.otf') format('OpenType');
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+
+    font-family: 'PlusJakartaSans', sans-serif;
+}
+
+.btn-light {
+    background-color: #fff;
+}
+
+.nav {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    transition: background-color 150ms;
+    z-index: 1;
+}
+
+.nav.scrolled {
+    background-color: #fff;
+}
+
+.nav.scrolled .logo-text {
+    color: #000;
+}
+
+.nav.scrolled .menu a {
+    color: #000;
+}
+
+.nav.scrolled .btn-light{
+    background-color: #0dc39f;
+    color: #fff;
+}
+
+.nav.scrolled .btn-light:hover{
+    background-color: #059377;
+}
+
+.nav-container {
+    position: relative;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translate(-50%, -50%);
+}
+
+.logo a,
+.logo img {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 65px;
+    line-height: 20px;
+    font-family: 'PlusJakartaSans', sans-serif;
+}
+
+.logo img {
+    max-height: 45px;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.menu a {
+    color: #fff;
+}
+
+.menu a:nth-child(1),
+.menu a:nth-child(2),
+.menu a:nth-child(3),
+.menu a:nth-child(4) {
+    margin-right: 15px;
+}
+
+.header-img {
+    background: linear-gradient(to bottom, rgba(25, 25, 25, 0.375), rgba(25, 25, 25, 0.375)), url("/img/header-img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.header-box {
+    width: 575px;
+    height: 308px;
+    position: absolute;
+    padding: 50px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-box h1 {
+    line-height: 35px;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'PlusJakartaSans Light', sans-serif;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #7f7f7f;
+    font-family: 'PlusJakartaSans';
+    line-height: 21px;
+}
+
+.search-box::placeholder {
+    color: #7f7f7f;
+    font-family: 'PlusJakartaSans Medium', sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.rise {
+    margin-top: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.rise span {
+    cursor: text;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.title {
+    font-size: 24px;
+    margin: 22px 0;
+    color: #2c343e;
+}
+
+.header-menu {
+    text-align: center;
+}
+
+.header-menu a {
+    padding: 10px;
+    color: #626262;
+    transition: color 500ms;
+}
+
+.header-menu a:hover {
+    color: #000;
+}
+
+.header-menu .active {
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.header-menu .active:hover {
+    color: #fff;
+    background-color: #4f4e4e;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.gallery div {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.gallery div img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.35s ease;
+}
+
+.gallery div img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 20px;
+    background: #E5E5E5;
+    margin-top: 30px;
+    display: flex;
+}
+
+footer div:nth-child(1) {
+    margin-right: auto;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc() Kullanımı</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #161515;
+        }
+
+        h2 {
+            margin: 20px 0 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 6px;
+        }
+
+        .box p {
+            font-size: 18px;
+            line-height: 32px;
+        }
+
+        .demobox {
+            background-color: darkslateblue;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .demo-box {
+            width: calc(50% + 100px);
+        }
+
+        .demo-box2 {
+            width: calc(50% - 100px);
+        }
+
+        .demo-box3 {
+            width: calc(50% * 2);
+        }
+
+        .demo-box4 {
+            width: calc(50% / 2);
+        }
+
+
+        /* height */
+
+        .height-box{
+            height: 350px;
+            background: #1e1e1b;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .demo-box-1 {
+            height: calc(50% + 100px);
+        }
+
+        .demo-box-2 {
+            height: calc(50% - 100px);
+        }
+
+        .demo-box-3 {
+            height: calc(50% * 2);
+        }
+
+        .demo-box-4 {
+            height: calc(50% / 2);
+        }
+
+        /* örnek kullanım */
+
+        .menu-alani{
+            float: left;
+            width: 100px;
+            height: 300px;
+            background-color: limegreen;
+            padding: 10px;
+        }
+
+        .sag-icerik{
+            float: right;
+            width: calc(100% - 100px);
+            height: 300px;
+            background-color: mediumseagreen;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <p>
+                <b>calc() :</b> Değer hesaplama işlemleri için kullanılır. <br>
+                <b>Değerler :</b> toplama (+), çıkarma (-), çarpma (*), bölme (/)
+            </p>
+
+            <h2>Width değeri için calc() kullanımı</h2>
+
+            <div class="demobox demo-box">calc(50% + 100px) = genişliği 50% ver. 50% ile 100px'i topla.
+            </div> <br>
+            <div class="demobox demo-box2">calc(50% - 100px) = genişliği 50% ver. 50%'den 100px çıkar.</div> <br>
+            <div class="demobox demo-box3">calc(50% * 2) = genişliği 50% ver. 50%'yi 2 ile çarp. 2px ile değil -> 2 ile
+                olacaktır unutmayın!</div> <br>
+            <div class="demobox demo-box4">calc(50% / 2) = genişliği 50% ver. 50%'yi 2 ile böl.</div>
+
+            <h2>Height değeri için calc() kullanımı</h2>
+            <p>bilgi : height-box kutusu height değeri 350px</p>
+
+            <div class="height-box">
+                <div class="demobox demo-box-1">calc(50% + 100px) : yüksekliği 50% ver. 50% ile 100px'i topla.</div>
+            </div>
+
+            <div class="height-box">
+                <div class="demobox demo-box-2">calc(50% - 100px) : yüksekliği 50% ver. 50%'den 100px çıkar.</div>
+            </div>
+
+            <div class="height-box">
+                <div class="demobox demo-box-3">calc(50% * 100px) : yüksekliği 50% ver. 50%'yi 2 ile çarp.</div>
+            </div>
+
+            <div class="height-box">
+                <div class="demobox demo-box-4">calc(50% - 100px) : yüksekliği 50% ver. 50%'yi 2 ile böl</div>
+            </div>
+
+            <h2>Örnek kullanım</h2>
+
+            <div class="menu-alani">genişlik 100px</div>
+            <div class="sag-icerik">genişlik 100% ver. 100%'den 100px çıkar.</div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

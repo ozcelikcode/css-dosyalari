@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+</head>
+<body>
+
+    <style>
+
+        a{
+            padding: 10px 15px;
+            border: 2px solid black;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        a:active{
+            color: royalblue;
+        }
+
+        a:visited{ /* Sayfaya girdiği doğrulanırsa kırmızı renk olur */
+            color: green;
+        }
+
+        a:hover{
+            background: #000;
+            color: #fff;
+        }
+
+    </style>
+
+    <a href="#link4">Link 1</a>
+    <a href="combinators.html">Link 2</a>
+    <a href="#link6">Link 3</a>
+    
+</body>
+</html>

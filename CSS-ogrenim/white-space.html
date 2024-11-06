@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Space Kullanımı</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #161515;
+        }
+
+        h2 {
+            margin: 20px 0 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 6px;
+        }
+
+        .box p {
+            font-size: 18px;
+            line-height: 32px;
+            color: #908f8f;
+            margin: 20px 0;
+        }
+
+        b {
+            color: slateblue;
+        }
+
+        .ornek-1 {
+            white-space: nowrap;
+        }
+
+        .ornek-2 {
+            white-space: normal;
+        }
+
+        .ornek-3 {
+            white-space: pre;
+        }
+
+        .ornek-4 {
+            white-space: pre-line;
+        }
+
+        .ornek-5 {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+
+            <p><b>white-space</b> özelliği, bir öğenin içindeki boş alanların nasıl kullanılacağını belirtir.</p>
+
+            <p class="ornek-1">
+                <b>white-space : nowrap</b> = <b>satır atlamaz ve bir boşluktan fazlasını okumaz</b> -> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Laudantium nam exercitationem totam minima dolorem.
+            </p>
+
+            <p class="ornek-2">
+                <b>white-space : normal</b> -> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Qui sit minima dignissimos exercitationem maxime quisquam dolorem facere voluptatem saepe commodi.
+            </p>
+
+            <p class="ornek-3">
+>
+                <b>white-space : pre</b> = <b>Boşlukların hepsi alınır</b> -> Lorem    boşluk   ipsum dolor sit amet consectetur adipisicing elit.
+                Quasi autem quis doloribus iusto eligendi doloremque porro expedita tempore ipsa voluptas.
+>
+            </p>
+
+            <p class="ornek-4">
+                <b>white-space : pre-line</b> -> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus, commodi laboriosam ad assumenda repellat possimus labore quaerat. Delectus, perspiciatis
+                totam.
+            </p>
+
+            <p class="ornek-5">
+                <b>white-space: pre-wrap</b> -> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Libero incidunt veniam eius similique, dignissimos eveniet nihil exercitationem? Sit, minima iure?
+            </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

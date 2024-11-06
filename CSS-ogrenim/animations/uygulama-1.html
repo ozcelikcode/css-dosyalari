@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uygulama</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .btn {
+            background-color: #fff;
+            border: 3px solid black;
+            padding: 10px 20px;
+            color: #000;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #000;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .page {
+            height: 100vh;
+            position: relative;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 72px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .animate-title {
+            animation: title 3s forwards ease;
+        }
+
+        .p {
+            margin-bottom: 30px;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .animate-p {
+            animation: paragraph 4s forwards ease;
+        }
+
+        .animate-btn {
+            animation: button 5s forwards ease;
+        }
+
+        .page-container {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .page-1 {
+            background-color: mediumseagreen;
+        }
+
+        .page-2 {
+            background-color: mediumslateblue;
+        }
+
+        .page-3 {
+            background-color: mediumvioletred;
+        }
+
+        @keyframes title {
+            from {
+                margin-top: -500px;
+            }
+
+            to {
+                margin-bottom: 20px;
+            }
+        }
+
+        @keyframes paragraph {
+            from {
+                margin-right: 500px;
+            }
+
+            to {
+                margin-bottom: 30px;
+            }
+        }
+
+        @keyframes button {
+            from {
+                margin-left: 500px;
+            }
+
+            to {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+
+
+    <section class="page page-1" id="page-1">
+
+        <div class="page-container">
+            <h1 class="title animate-title">Sayfa 1</h1>
+            <p class="p animate-p">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <a class="btn animate-btn" href="#page-2">Sonraki Sayfa</a>
+        </div>
+
+    </section>
+
+
+    <section class="page page-2" id="page-2">
+
+        <div class="page-container">
+            <h1 class="title">Sayfa 2</h1>
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <a href="#page-1" class="btn">Önceki Sayfa</a>
+            <a href="#page-3" class="btn">Sonraki Sayfa</a>
+        </div>
+
+    </section>
+
+
+    <section class="page page-3" id="page-3">
+
+        <div class="page-container">
+            <h1 class="title">Sayfa 3</h1>
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <a href="#page-2" class="btn">Önceki Sayfa</a>
+            <a href="#page-1" class="btn">Başa Dön</a>
+        </div>
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+</body>
+
+</html>

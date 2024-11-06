@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-break Kullanımı</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box div {
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .ornek-box{
+            border: 1px solid white;
+            height: 200px;
+            width: 300px;
+        }
+
+        .ornek-1{
+            word-break: normal;
+        }
+
+        .ornek-2{
+            word-break: keep-all;
+        }
+
+        .ornek-3{
+            word-break: break-all;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+
+            <p><b>word-break</b> özelliği, birleşik yazılarda satır atlamayan metinleri halleder.</p>
+
+            <b>word-break: normal (default)</b><div class="ornek-box ornek-1">MardindeFreniPatlayanTırınŞoförüTutuklandı. Kelimeler her zamanki kurallara göre kırılır.</div>
+            
+            <br>
+
+            <b>word-break : keep-all</b> <div class="ornek-box ornek-2">ÇooooooooooooooookUzunYazı. Bu metin kısa çizgi word-break sayesinde bölünür.</div>
+            
+            <br>
+
+            <b>word-break : break-all</b> <div class="ornek-box ornek-3">ÇooooooooooooooookUzunYazı. </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

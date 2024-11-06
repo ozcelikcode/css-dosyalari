@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Kullanımı</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 60%;
+        margin: 25px auto;
+    }
+
+    .alert {
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+    }
+
+    .alert-warning {
+        background: rgba(245, 245, 15, 0.76);
+    }
+
+    .title {
+        font-size: 26px;
+        margin: 20px 0 10px;
+    }
+
+    .flex {
+        display: flex;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .flex-container {
+        background: rgba(98, 98, 98, 0.785);
+        height: 300px;
+    }
+
+    .item {
+        color: #fff;
+        background: #333;
+        padding: 20px;
+        margin: 0 10px 10px 0;
+    }
+
+    /* i1 */
+    .i1 {
+        flex-grow: 1;
+    }
+
+    /* i2 */
+    .i2.item-1,
+    .i2.item-2,
+    .i2.item-3 {
+        flex-grow: 0;
+    }
+
+
+    /* i3 */
+    .i3.item-1 {
+        flex-grow: 1;
+    }
+
+    .i3.item-2 {
+        flex-grow: 3;
+    }
+
+    .i3.item-3 {
+        flex-grow: 1;
+    }
+
+
+    /* i4 */
+    .i4.item-1 {
+        flex-grow: 1;
+    }
+
+    .i4.item-2 {
+        flex-basis: 500px;
+    }
+
+    .i4.item-3 {
+        flex-grow: 1;
+    }
+
+    /* i5 */
+    .i5.item-1 {
+        flex-grow: 1;
+    }
+
+    .i5.item-2 {
+        flex-basis: 500px;
+        flex-shrink: 0;
+    }
+
+    .i5.item-3 {
+        flex-grow: 1;
+    }
+
+    /* i6 */
+    .i6.item-1 {
+        flex-grow: 1;
+    }
+
+    .i6.item-2 {
+        flex: 1 1 400px;
+    }
+
+    .i6.item-3 {
+        flex: 2;
+    }
+
+    /* i7 */
+    .i7.item-1 {
+       flex: 25%;
+       order: 3;
+    }
+
+    .i7.item-2 {
+        flex: 25%;
+        order: 1;
+    }
+
+    .i7.item-3 {
+        flex: 50%;
+        order: 2;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title">flex-grow 1 sayesinde her yere eşit bir şekilde boşluk dağılır. bunu tek tek item'lara da
+            verebilirsin.</h2>
+
+        <div class="flex flex-container ">
+            <div class="item i1 item-1">item-1 - flex-grow 1</div>
+            <div class="item i1 item-2">item-2 - flex-grow 1</div>
+            <div class="item i1 item-3">item-3 - flex-grow 1</div>
+        </div>
+
+        <h2 class="title">flex-grow 0 kullanılmıştır. flex-grow 0 ise metnin kapladığı yere kadar boşluk bırakır. -
+            Default</h2>
+
+        <div class="flex flex-container">
+            <div class="item i2 item-1">item-1 - flex-grow 0</div>
+            <div class="item i2 item-2">item-2 - flex-grow 0</div>
+            <div class="item i2 item-3">item-3 - flex-grow 0</div>
+        </div>
+
+        <!-- <div class="alert alert-warning">Warning</div> -->
+
+        <h2 class="title">Tek tek itemlara flex-grow değerini verebilirsin</h2>
+
+        <div class="flex flex-container">
+            <div class="item i3 item-1">item-1 - flex-grow 1</div>
+            <div class="item i3 item-2">item-2 - flex-grow 3</div>
+            <div class="item i3 item-3">item-3 - flex-grow 1</div>
+        </div>
+
+        <h2 class="title">Flex-basis kullanarak item 2'ye 500px genişlik verdik ekran küçülünce diğerleri gibi değeri
+            varsayılan değer olan flex-grow 1 olacaktır.</h2>
+
+        <div class="flex flex-container">
+            <div class="item i4 item-1">item-1 - flex-grow 1</div>
+            <div class="item i4 item-2">item-2 - flex-basis: 500px;</div>
+            <div class="item i4 item-3">item-3 - flex-grow 1</div>
+        </div>
+
+        <h2 class="title">Burada flex-basis 500px yazdık ve flex-shrink 0 özelliği ile item-2 ekran küçüldüğünde hiçbir zaman küçülmesin demiş olduk. flex-shrink 1 dersek varsayılan özelliği kullanmış oluruz (flex-grow: 1).</h2>
+
+        <div class="flex flex-container">
+            <div class="item i5 item-1">item-1 - flex grow 1</div>
+            <div class="item i5 item-2">item-2 - flex-basis 500px, flex-shrink 0</div>
+            <div class="item i5 item-3">item-3 - flex-grow 1</div>
+        </div>
+
+        <h2 class="title">flex: grow shrink basis; - Flex toplu kullanımı</h2>
+
+        <div class="flex flex-container">
+            <div class="item i6 item-1">item-1 - grow 1</div>
+            <div class="item i6 item-2">item-2 - flex: 1 1 400px;</div>
+            <div class="item i6 item-3">item-3 - flex: 2</div>
+        </div>
+
+        <h2 class="title">flex yüzdelik dağıtma</h2>
+
+        <div class="flex flex-container">
+            <div class="item i7 item-1">item-1 - flex: 25%</div>
+            <div class="item i7 item-2">item-2 - flex: 25%</div>
+            <div class="item i7 item-3">item-3 - flex: 50%</div>
+        </div>
+
+        <h2 class="title">item'ların yerini değiştirme. İstersen bir item'a mesela item-2'ye order: 1 ver baş sıraya geçecektir. - order: 0 varsayılan değerdir. - order: -1 yine ilk sıraya alır.</h2>
+
+        <div class="flex flex-container">
+            <div class="item i7 item-1">item-1 - order: 3</div>
+            <div class="item i7 item-2">item-2 - order: 1</div>
+            <div class="item i7 item-3">item-3 - order: 2</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

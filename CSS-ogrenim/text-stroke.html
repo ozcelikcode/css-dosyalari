@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(x) Text-Stroke Kullanımı</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box div {
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .ornek-1{
+            -webkit-text-stroke-width: 1;
+        }
+
+        .ornek-2{
+            -webkit-text-stroke: 3;
+        }
+
+        .ornek-3{
+            -webkit-text-stroke: 5;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+
+            <p><b>text-stroke</b> özelliği, yazı dış kalınlığını ayarlar. Bazı larda uyumsuzluk vardır. Kullanımı artık <u>sıkıntı yaratmaktadır</u>.</p>
+
+            <b>text-stroke : 1</b> <div class="ornek-1">Dış yazı kalınlığı 1</div>
+
+            <b>text-stroke : 3</b> <div class="ornek-2">Dış yazı kalınlığı 3</div>
+
+            <b>text-stroke : 5</b> <div class="ornek-3">Dış yazı kalınlığı 5</div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

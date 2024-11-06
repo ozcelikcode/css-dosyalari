@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonlight 2</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">Moon Light</a>
+        <ul>
+            <li><a href="#" class="active">Ana Sayfa</a></li>
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">bos bos</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="assets/img/stars.png" id="stars">
+        <img src="assets/img/moon.png" id="moon">
+        <img src="assets/img/mountains_behind.png" id="mountains_behind">
+        <h2 id="big-title">Moon Light</h2>
+        <a href="#sec" id="btn">Keşfet</a>
+        <img src="assets/img/mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Profesyonel Web Sayfa Efektleri</h2>
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, excepturi. Nemo repellendus doloremque
+            quae officia consequuntur accusamus quas obcaecati quidem rerum voluptates atque et rem beatae incidunt sed
+            perferendis, ratione dolor consequatur nihil. Numquam soluta molestiae ad officiis dolorum minus unde,
+            accusamus, nisi, laboriosam ratione quibusdam maiores illo aut blanditiis quo nam fugiat vel aperiam quod
+            enim? Ea modi delectus dignissimos veniam non error perferendis nihil molestias nulla eligendi dolore
+            aliquam nobis beatae, fuga et porro aspernatur commodi illo numquam ducimus assumenda culpa? Laborum vel
+            reprehenderit cupiditate vero cumque. Obcaecati quos accusamus harum dicta, sit quas accusantium quidem illo
+            fugiat.
+            <br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, excepturi. Nemo repellendus doloremque
+            quae officia consequuntur accusamus quas obcaecati quidem rerum voluptates atque et rem beatae incidunt sed
+            perferendis, ratione dolor consequatur nihil. Numquam soluta molestiae ad officiis dolorum minus unde,
+            accusamus, nisi, laboriosam ratione quibusdam maiores illo aut blanditiis quo nam fugiat vel aperiam quod
+            enim? Ea modi delectus dignissimos veniam non error perferendis nihil molestias nulla eligendi dolore
+            aliquam nobis beatae, fuga et porro aspernatur commodi illo numquam ducimus assumenda culpa? Laborum vel
+            reprehenderit cupiditate vero cumque. Obcaecati quos accusamus harum dicta, sit quas accusantium quidem illo
+            fugiat.
+            <br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, excepturi. Nemo repellendus doloremque
+            quae officia consequuntur accusamus quas obcaecati quidem rerum voluptates atque et rem beatae incidunt sed
+            perferendis, ratione dolor consequatur nihil. Numquam soluta molestiae ad officiis dolorum minus unde,
+            accusamus, nisi, laboriosam ratione quibusdam maiores illo aut blanditiis quo nam fugiat vel aperiam quod
+            enim? Ea modi delectus dignissimos veniam non error perferendis nihil molestias nulla eligendi dolore
+            aliquam nobis beatae, fuga et porro aspernatur commodi illo numquam ducimus assumenda culpa? Laborum vel
+            reprehenderit cupiditate vero cumque. Obcaecati quos accusamus harum dicta, sit quas accusantium quidem illo
+            fugiat.
+        </p>
+        
+        <br><br>
+
+        <button class="btn btn-white">White Button</button>
+
+        <br><br>
+
+        <p>Yapım Tarihi : 06.09.2022 / ozcelikcode</p>
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let big_title = document.getElementById('big-title');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            big_title.style.marginRight = value * 4 + 'px';
+            big_title.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+</body>
+
+</html>

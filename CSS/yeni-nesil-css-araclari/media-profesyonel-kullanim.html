@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Orientation Kullanımı</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1{
+            font-weight: 500;
+        }
+
+        .box {
+            width: 70%;
+            height: 200px;
+            padding: 10px;
+            position: absolute;
+            border-radius: 6px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box p{
+            color: gray;
+        }
+
+        .landscape-active,
+        .portrait-active {
+            display: none;
+        }
+
+        @media (orientation: landscape) { /* Ekranın büyüme esnasında geçiş yaptığı kod parçarsı */
+            body {
+                background-color: #fff;
+            }
+
+            .box {
+                border: 2px solid black;
+            }
+
+            .landscape-active {
+                display: inline-block;
+                color: black;
+            }
+        }
+
+        @media (orientation: portrait) { /* Ekranın küçülme esnasında geçiş yaptığı kod parçarsı */
+            body {
+                background-color: #000;
+            }
+
+            .box {
+                width: 95%;
+                height: auto;
+                border: 2px solid white;
+            }
+
+            .portrait-active {
+                display: inline-block;
+                color: white;
+            }
+
+        }
+    </style>
+
+    <div class="box">
+        <h1 class="landscape-active">
+            orientation: landscape
+            <p>
+                width: 70%; <br>
+                height: 200px; <br>
+                border: 2px solid black;
+            </p>
+
+        </h1>
+        <h1 class="portrait-active">
+            orientation: portrait
+            <p>
+                width: 95%; <br>
+                height: auto; <br>
+                border: 2px solid white;
+            </p>
+        </h1>
+    </div>
+
+</body>
+
+</html>

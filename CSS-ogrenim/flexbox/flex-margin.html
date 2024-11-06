@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-Content Kullanımı</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 60%;
+        margin: 25px auto;
+
+    }
+
+    .alert {
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+    }
+
+    .alert-warning {
+        background: rgba(245, 245, 15, 0.76);
+    }
+
+    .title {
+        font-size: 26px;
+        margin: 20px 0 10px;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        background: rgba(98, 98, 98, 0.785);
+        height: 400px;
+
+    }
+
+    .flex-container {
+        align-content: flex-start;
+    }
+
+    .item {
+        color: #fff;
+        background: #333;
+        padding: 20px;
+    }
+
+    .i1 {
+        margin-left: auto;
+    }
+
+    .i2 {
+        margin-right: auto;
+    }
+
+    .i3 {
+        margin-bottom: auto;
+    }
+
+    .i4 {
+        margin-top: auto;
+    }
+
+    .i5 {
+        margin: auto;
+    }
+
+    .i6 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .i7 {
+        margin-left: auto;
+    }
+
+    .i8 {
+        margin-right: auto;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title">Burada ise olay tamamen basit. Belirttiğin yerden margin ters bir şekilde kayıyor</h2>
+        <h2 class="title">Bu ayarı kullanmak ince bir ayardır bu ayarları iyi bilmek gerek.</h2>
+
+        <h2 class="title">align-content: flex-start</h2>
+        <div class="flex flex-container">
+            <div class="item i1">margin-left: auto</div>
+        </div>
+
+        <div class="flex flex-container">
+            <div class="item i2">margin-right: auto</div>
+        </div>
+
+        <div class="flex flex-container">
+            <div class="item i3">margin-bottom: auto</div>
+        </div>
+
+        <div class="flex flex-container">
+            <div class="item i4">margin-top: auto</div>
+        </div>
+
+        <div class="flex flex-container">
+            <div class="item i5">margin: auto</div>
+        </div>
+
+        <h2 class="title">Karışık Örnekler</h2>
+
+        <div class="flex flex-container">
+            <div class="item i6">margin-left: auto ve margin-right: auto</div>
+        </div>
+
+        <div class="flex flex-container">
+            <div class="item i7">margin-left: auto</div>
+            <div class="item i8">margin-right: auto</div>
+        </div>
+
+</body>
+
+</html>

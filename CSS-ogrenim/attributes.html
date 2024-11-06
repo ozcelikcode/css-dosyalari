@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 60%;
+        margin: 25px auto;
+    }
+
+    .box {
+        width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+        background: #1363DF;
+        color: #fff;
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .box h1 {
+        font-weight: 600;
+        font-size: 42px;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+    }
+
+    .box p {
+        font-size: 22px;
+        margin-bottom: 20px;
+        line-height: 36px;
+        color: rgb(235, 232, 232);
+    }
+
+    .box p .b {
+        font-weight: 500;
+        color: #F9D923;
+    }
+
+    .box p .b::after {
+        content: " : ";
+    }
+
+    .code {
+        color: #35013F;
+    }
+
+    .w3s{
+        text-align: center;
+        margin-bottom: 30px ;
+    }
+
+    .w3sl{
+        font-size: 18px;
+        color: #000;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+            <h1>Attributes</h1>
+
+            <p><span class="b">a[target]</span>a sınıfındaki bütün target içeren öğeleri seç. target yerine class da
+                olabilir</p>
+
+            <p><span class="b">[class]</span>bütün class içeren classları seç.</p>
+
+            <p><span class="b">[class="active"]</span>class'ı active içeren öğeleri bul. class'da active-p veya
+                activenesne
+                yazarsa çalış-maz.</p>
+
+            <p><span class="b">[class*="active"]</span>class'ı active içeren öğeleri bul. class'da active-p veya
+                activenesne
+                yazarsa çalışır.</p>
+
+            <p><span class="b">[class~="active"]</span>class'la bitişik olmayan active yazan öğeleri bul. class'da
+                active-p veya activenesne
+                yazarsa çalış-maz. Fakat <span class="code">a href="" class="active class1 class2"</span> şeklinde
+                olursa çalışır. active
+                class'ına hiçbir şey bitişik olmaması gerekir.</p>
+
+            <p><span class="b">[class|="active"]</span>class'ı ilk active yazan öğeleri bul. class'da <span
+                    class="code">a href="" class="active class1"</span> active her zaman önde olacak eğer <span
+                    class="code">a href="" class="class1 active"</span> böyle olursa çalışmaz. bitişik yazma kabul
+                edilir eğer active öğesi ilk sıradaysa <span class="code">örnek: active-text</span> bu çalışır.</p>
+
+            <p><span class="b">[class^="active"]</span>üstteki ile aynıdır.</p>
+            <p><span class="b">[class$="active"]</span>class'ı son active yazan öğeleri bul. class'da <span
+                class="code">a href="" class="text active"</span> active her zaman sonda olacak eğer <span
+                class="code">a href="" class="active text"</span> böyle olursa çalışmaz.</p>
+
+        </div>
+
+    </div>
+
+    <div class="w3s">Linke Tıkla: <a class="w3sl" href="https://www.w3schools.com/cssref/pr_font_font.asp">Daha fazla ve ayrıntılı bilgi için w3schools sitesini ziyaret etmeni öneririm hem orada önizleme yaparak konuyu daha iyi anlarsın</a></div>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    transition: background-color 150ms;
+    z-index: 1;
+}
+
+.nav.scrolled {
+    background: rgba(0, 0, 0, 0.300);
+    backdrop-filter: blur(8px);
+}
+
+.nav.scrolled .logo-text {
+    color: #fff;
+}
+
+.nav.scrolled .menu a {
+    color: #fff;
+}
+
+.nav.scrolled .btn-white {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.nav-container {
+    position: relative;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translate(-50%, -50%);
+}
+
+.logo a {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 65px;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.menu a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu a:nth-child(1),
+.menu a:nth-child(2),
+.menu a:nth-child(3),
+.menu a:nth-child(4) {
+    margin-right: 15px;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("/assets/img/hosting-server.jpg");
+
+}
+
+.hero-p {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+}
+
+.hero-p h1 {
+    font-size: 72px;
+    font-weight: 500;
+    width: 60%;
+    color: #fff;
+    line-height: 76px;
+    margin-bottom: 10px;
+}
+
+.hero-p p {
+    font-size: 40px;
+    width: 60%;
+    color: rgb(204, 204, 204);
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 14px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .10s ease;
+}
+
+.btn-white {
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.btn-white:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-white:focus {
+    outline: 4px solid rgb(169, 169, 169);
+}
+
+.hosting-price {
+    height: 100vh;
+    padding: 100px;
+}
+
+.price-container {
+    display: flex;
+}
+
+.price-container .wordpress,
+.web-hosting,
+.cloud-server {
+    min-width: 33.3%;
+    height: 80vh;
+    position: relative;
+}
+
+.price-container .wordpress {
+    background: rgb(31,111,147);
+    background: radial-gradient(circle, rgba(31,111,147,1) 0%, rgba(95,159,233,1) 100%);
+}
+
+.price-container .web-hosting {
+    background: rgb(10,142,47);
+    background: radial-gradient(circle, rgba(10,142,47,1) 0%, rgba(46,210,93,1) 100%);
+}
+
+.price-container .cloud-server {
+    background: rgb(39,52,196);
+    background: radial-gradient(circle, rgba(39,52,196,1) 0%, rgba(99,110,230,1) 100%);
+}
+
+.fb {
+    color: #fff;
+}
+
+.con {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.con h1{
+    color: #fff;
+    font-weight: 500;
+}
+
+.fa-wordpress, .fa-server, .fa-cloud {
+    font-size: 96px;
+}
+

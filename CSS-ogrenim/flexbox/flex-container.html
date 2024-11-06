@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Container</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .title {
+        padding: 0;
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+
+    .container {
+        background: #898AA6;
+        width: 50%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    .con {
+        background: #898AA6;
+        display: flex;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .item {
+        background: #E4DCCF;
+        padding: 20px;
+        margin: 0 10px 10px 0;
+    }
+
+    .item:first-child {
+        background: rgb(131, 225, 49);
+    }
+
+    .flex-container2 {
+        flex-direction: column;
+    }
+
+    .flex-container3 {
+        flex-direction: column-reverse;
+    }
+
+    .flex-container4 {
+        flex-direction: row-reverse;
+    }
+
+    .flex-container5 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-container6 {
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+    }
+</style>
+
+<body>
+
+    <h2 class="title">Burada flex-direction: row; yazdık ve sonuç böyle. kısacası kolonlara inline-block veriyor.</h2>
+
+    <div class="container">
+        <div class="con flex-container">
+            <div class="item">iTem 1 - İlk</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+            <div class="item">iTem 5 - Son</div>
+        </div>
+    </div>
+
+    <h2 class="title">flex-direction: column; - burada ise kolonlara display: block veriyor</h2>
+
+    <div class="container">
+        <div class="con flex-container2">
+            <div class="item">iTem 1 - İlk</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+            <div class="item">iTem 5 - Son</div>
+        </div>
+    </div>
+
+    <h2 class="title">flex-direction: column-reverse; - Colonları tersine çeviriyor</h2>
+
+    <div class="container">
+        <div class="con flex-container3">
+            <div class="item">iTem 1 - İlk</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+            <div class="item">iTem 5 - Son</div>
+        </div>
+    </div>
+
+    <h2 class="title">flex-direction: row-reverse; - Row'ları tersine çeviriyor</h2>
+
+    <div class="container">
+        <div class="con flex-container4">
+            <div class="item">iTem 1 - İlk</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+            <div class="item">iTem 5 - Son</div>
+        </div>
+    </div>
+
+    <h2 class="title">Farkettiğin üzere ekranı küçülttüğünde kolonlar bozuluyor ve birbirine giriyor. <br> Bunun kısaca
+        çözümü. flex-wrap: wrap; olacaktır</h2>
+
+    <div class="container">
+        <div class="con flex-container5">
+            <div class="item">iTem 1 - İlk</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+            <div class="item">iTem 5 - Son</div>
+        </div>
+    </div>
+
+    <h2 class="title">flex-wrap: wrap-reverse; - özelliği</h2>
+
+    <div class="container">
+        <div class="con flex-container6">
+            <div class="item">iTem 1 - İlk</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+            <div class="item">iTem 4</div>
+            <div class="item">iTem 5 - Son</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

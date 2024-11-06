@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+        height: 140px;
+        position: relative;
+        background: slateblue;
+        color: #fff;
+    }
+
+    .header-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo {
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+
+    .menu {
+        list-style: none;
+        background: #333;
+        position: relative;
+    }
+
+    .menu li {
+        display: inline-block;
+        padding: 15px 0;
+    }
+
+    .menu li a {
+        color: #fff;
+        background: #333;
+        text-decoration: none;
+        padding: 15px;
+    }
+
+    .menu li a:hover {
+        background: #3e3d3d;
+    }
+
+    .flex-container {
+        display: flex;
+    }
+
+    .flex-container div {
+        padding: 20px;
+    }
+
+    .flex-container h2 {
+        margin-bottom: 10px;
+    }
+
+    .flex-container p {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .flex-container .content {
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .box {
+        padding: 10px;
+        height: 200px;
+        background: #333;
+    }
+
+    .sidebar {
+        background: #E5E5E5;
+        width: 30%;
+    }
+
+    @media screen and (max-width:600px) {
+
+        .flex-container {
+            flex-direction: column;
+        }
+
+        .flex-container .content {
+            width: 95%;
+            margin: auto;
+        }
+
+        .flex-container .sidebar {
+            width: 95%;
+            margin: auto;
+        }
+
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <div class="header-container">
+            <h1 class="logo">Flex Layout</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+
+    <ul class="menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a></li>
+        <li><a href="">Menu 3</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="flex-container">
+            <div class="content">
+                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                <div class="box"></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In modi omnis culpa odio enim animi
+                    eligendi veniam distinctio iure illo.</p>
+
+                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                <div class="box"></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In modi omnis culpa odio enim animi
+                    eligendi veniam distinctio iure illo.</p>
+
+                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                <div class="box"></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In modi omnis culpa odio enim animi
+                    eligendi veniam distinctio iure illo.</p>
+            </div>
+
+
+            <div class="sidebar">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <div class="box"></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In modi omnis culpa odio enim animi
+                    eligendi veniam distinctio iure illo.</p>
+
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <div class="box"></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In modi omnis culpa odio enim animi
+                    eligendi veniam distinctio iure illo.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

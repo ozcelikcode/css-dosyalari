@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            background: violet;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: block;
+            background: royalblue;
+            float: right;
+        }
+
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+
+<h3>Normalde float: right dediğimizde paragraf ve kutular birbirine girer bunun önune geçmek için yani float değerini block hale çevirmek için ya box'ların sonrasına div açıp div style clear: both değeri verirsin. Eğer clear both vermezsem container değerinin arkaplan rengini göremezdik</h3>
+
+<h3>İstersen boxlardan sonra div ekle sonra clear both özelliği ver istersende style etiketinin içinde .clearfix elemanına ::after ekle sonrada content ve de clear: both, display block ekle</h3>
+
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <p>
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf 
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf 
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf 
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf 
+        Paragraf Paragraf Paragraf Paragraf Paragraf Paragraf 
+        Paragraf Paragraf Paragraf Paragraf
+    </p>
+
+    <h3>clear: both -> her iki taraftan boşluk verir</h3>
+    <h3>clear: left -> sağ taraftan boşluk verir</h3>
+    <h3>clear: right -> sol taraftan boşluk verir</h3>
+    <h3>clear: none -> clear kullanılmaz.</h3>
+
+</body>
+
+</html>

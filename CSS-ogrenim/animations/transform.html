@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ::selection {
+        background-color: hotpink;
+        color: #fff;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .info-box {
+        padding: 20px;
+        margin: 50px auto;
+        border: 3px solid black;
+        border-radius: 12px;
+    }
+
+    .info-con {
+        margin-bottom: 30px;
+    }
+
+    .info-box-title {
+        font-weight: 600;
+        display: inline-block;
+        font-size: 26px;
+    }
+
+    .info-box-title::after {
+        content: ' : ';
+    }
+
+    .info-box-p {
+        display: inline-block;
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .ornek {
+        color: #fff;
+        background: #000;
+        padding: 10px;
+    }
+
+    .title {
+        margin: 20px 0 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+
+    .box-title {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        text-align: center;
+    }
+
+    /* Transform */
+
+    /* rotate */
+
+    .box-rotate-1 {
+        transform: rotate(180deg);
+        background-color: mediumpurple;
+    }
+
+    .box-rotate-2 {
+        transform: rotate(90deg);
+        background-color: goldenrod;
+    }
+
+    .box-rotate-3 {
+        transform: rotate(50deg);
+        background-color: slateblue;
+    }
+
+    .box-rotate-4 {
+        transform: rotate(-90deg);
+        background-color: navy;
+    }
+
+    .box-rotate-5 {
+        transform: rotate(-50deg);
+        background-color: fuchsia;
+    }
+
+    .box-rotate-6 {
+        transform: rotate(-220deg);
+        background-color: deeppink;
+    }
+
+    /* skew */
+
+    .box-skew-1 {
+        transform: skew(-30deg);
+        background-color: dodgerblue;
+    }
+
+    .box-skew-2 {
+        transform: skew(50deg);
+        background-color: dimgrey;
+    }
+
+    .box-skew-3 {
+        transform: skew(-50deg);
+        background-color: mediumseagreen;
+    }
+
+    /* scale */
+
+    .box-scale-1 {
+        background-color: forestgreen;
+        transform: scale(1.5);
+        margin-right: 70px;
+    }
+
+    .box-scale-2 {
+        background-color: darkorange;
+        transition: transform 500ms ease;
+    }
+
+    .box-scale-2:hover{
+        transform: scale(1.4);
+    }
+
+    .box-translate-1{
+        transform: translateX(200px);
+        background-color: crimson;
+    }
+
+    .box-translate-2{
+        transform: translateY(200px);
+        background-color:mediumvioletred;
+    }
+
+    .box-translate-3{
+        transform: translate(200px, 30px);
+        background-color:mediumvioletred;
+    }
+    
+</style>
+
+<body>
+
+    <div class="container">
+        <br>
+        <p>Yazıları göremediğin nesnelerin üzerine gel. Açıklama mevcut.</p>
+
+        <div class="info-box">
+
+
+            <div class="info-con">
+                <h2 class="info-box-title">transform: rotate(değer)</h2>
+                <p class="info-box-p">
+                    rotate sayesinde nesneleri döndürebilirsin. Mesela <span class="ornek">transform:
+                        rotate(90deg);</span> yazarsan nesne '90 derece' döner.
+                </p>
+            </div>
+
+
+            <div class="info-con">
+                <h2 class="info-box-title">transform: skew(değer)</h2>
+                <p class="info-box-p">
+                    nesneyi sağ-sol taraftan çevirir. Mesela <span class="ornek">transform: skew(-30deg); </span>
+                </p>
+            </div>
+
+
+            <div class="info-con">
+                <h2 class="info-box-title">transform: scale(değer)</h2>
+                <p class="info-box-p">
+                    nesneyi yazdığın kat kadar büyütür. Mesela <span class="ornek">transform: scale(2)</span> > nesneyi
+                    2 kat büyütür. scale(1) varsayılan değerdir.
+                </p>
+            </div>
+
+
+            <div class="info-con">
+                <h2 class="info-box-title">transform: translate(x, y, z)</h2>
+                <p class="info-box-p">
+                    translate sayesinde nesneyi olduğu yerden hareket ettirebilirsin. <br><span class="ornek">TRANSLATE NOT: bu konu hakkında biraz bilgi edinsen iyi olur. burada biraz eksik var.</span>
+                </p>
+            </div>
+
+
+        </div>
+
+
+        <div class="box box-rotate-1" title="180deg yani 180 derece döndürüldü">
+            <div class="box-title" title="180deg yani 180 derece döndürüldü">180deg Ters çevrilmiş kutu</div>
+        </div>
+
+        <div class="box box-rotate-2">
+            <div class="box-title">90deg çevrilmiş kutu</div>
+        </div>
+
+        <div class="box box-rotate-3">
+            <div class="box-title">50deg çevrilmiş kutu</div>
+        </div>
+
+        <div class="box box-rotate-4">
+            <div class="box-title">-90deg çevrilmiş kutu</div>
+        </div>
+
+        <div class="box box-rotate-5">
+            <div class="box-title">-50deg çevrilmiş kutu</div>
+        </div>
+
+        <div class="box box-rotate-6" title="-220deg döndürülmüş nesne">
+            <div class="box-title" title="-220deg döndürülmüş nesne">-220deg çevrilmiş kutu</div>
+        </div>
+
+        <br> <br> <br>
+
+        <div class="box box-skew-1">
+            <div class="box-title">transform: skew(-30deg)</div>
+        </div>
+
+        <div class="box box-skew-2" title="skew değeri 50deg">
+            <div class="box-title">transform: skew(50deg)</div>
+        </div>
+
+        <div class="box box-skew-3" title="skew değeri -50deg">
+            <div class="box-title">transform: skew(-50deg)</div>
+        </div>
+
+        <br> <br> <br>
+
+        <div class="box box-scale-1">
+            <div class="box-title">scale sayesinde 1.5 kat büyütülmüş nesne</div>
+        </div>
+
+        <div class="box box-scale-2">
+            <div class="box-title">üzerine geldiğinde 1.4 kat büyüyecek kutucuk</div>
+        </div>
+
+        <br> <br> <br>
+
+        <div class="box box-translate-1">
+            <div class="box-title">transform: translateX(200px)</div>
+        </div>
+
+        <div class="box box-translate-2">
+            <div class="box-title">transform: translateY(200px)</div>
+        </div>
+
+        <div class="box box-translate-3">
+            <div class="box-title">transform: translate(200px, 30px)</div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

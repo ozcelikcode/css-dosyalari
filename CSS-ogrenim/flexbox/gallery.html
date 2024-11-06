@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+        width: 85%;
+        margin: auto;
+    }
+
+    .header {
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 72px;
+        font-weight: 300;
+    }
+
+    .header p {
+        font-weight: 200;
+        font-size: 20px;
+        margin-top: -10px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .gallery div {
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .gallery div img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.35s ease;
+    }
+
+    .gallery div img:hover {
+        transform: scale(1.05);
+    }
+
+    footer {
+        padding: 20px;
+        background: #E5E5E5;
+        margin-top: 30px;
+        display: flex;
+    }
+
+    footer div:nth-child(1){
+        margin-right: auto;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1 class="logo">Gallery</h1>
+            <p>Gallery'de resimlerinizi güvenle saklayın.</p>
+        </div>
+
+        <div class="gallery">
+            <div>
+                <img src="https://picsum.photos/600/300?random=1">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/500/300?random=2">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/200/300?random=5">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/700/300?random=6">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/400/300?random=7">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/300/300?random=8">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/200/300?random=9">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/200/300?random=10">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/200/300?random=11">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/600/300?random=12">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/400/300?random=10">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/500/300?random=11">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/500/300?random=12">
+            </div>
+
+        </div>
+
+        <footer>
+            <div>
+                <p>2022 &copy; All Rights Reserved. Coding by ozcelikcode</p>
+            </div>
+            <div>instagram | facebook | twitter</div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

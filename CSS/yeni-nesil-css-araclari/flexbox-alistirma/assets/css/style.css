@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+body {
+  background-color: #212529;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav {
+  display: flex;
+  top: 0;
+  position: sticky;
+  height: 65px;
+  width: 100%;
+  padding: 0 140px;
+  align-items: center;
+  background-color: #032830;
+  border-bottom: 1px solid #055160;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  flex-grow: 50;
+}
+
+.nav-search {
+  flex-grow: 1;
+}
+
+.nav-search-box {
+  padding: 8px;
+  border-radius: 50px 0 0 50px;
+  background-color: #09242b;
+  border: 1px solid #055160;
+  color: #199cb6;
+  outline: none;
+}
+
+.nav-search-box::placeholder {
+  color: #199cb6;
+  padding: 3px;
+}
+
+.search-group {
+  display: flex;
+}
+
+.nav-search-btn {
+  padding: 8px 12px;
+  background-color: #09242b;
+  border: 1px solid #055160;
+  border-left: none;
+  border-radius: 0 50px 50px 0;
+  color: #199cb6;
+  cursor: pointer;
+}
+
+.nav-search-btn:hover {
+  background-color: #055160;
+}
+
+.logo-font {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: 30px auto;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subcategory {
+  padding-left: 16px;
+}
+
+.subcategory li::before {
+    content: "↪";
+    margin-right: 4px;
+}
+
+.content {
+  flex-grow: 3;
+}
+
+.flexbox {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  flex-grow: 1;
+  border: 1px dashed white;
+}
+
+.box-container {
+  display: flex;
+  gap: 10px;
+}
+
+.box-container .box {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.box {
+  padding: 16px;
+  display: block;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.box-info {
+  background-color: #031633;
+  border: 1px solid #084298;
+  color: #6ea8fe;
+}
+
+.box-danger {
+  background-color: #2c0b0e;
+  border: 1px solid #842029;
+  color: #ea868f;
+}
+
+.box-warning {
+  background-color: #332701;
+  border: 1px solid #664d03;
+  color: #ffda6a;
+}
+
+.footer {
+  display: flex;
+  height: 65px;
+  width: 100%;
+  padding: 0 140px;
+  align-items: center;
+  background-color: #032830;
+  border-top: 1px solid #055160;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  flex-grow: 50;
+}
+
+.footer-social {
+  flex-grow: 1;
+}

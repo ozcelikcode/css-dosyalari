@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content ve Align iTems</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 25px;
+    }
+
+    .container {
+        width: 50%;
+        margin: auto;
+    }
+
+    .title {
+        text-align: center;
+        margin: 50px 0 10px;
+    }
+
+    .fc {
+        padding: 20px;
+        background: #898AA6;
+        display: flex;
+        height: 300px;
+    }
+
+    .item {
+        background: #E4DCCF;
+        padding: 15px;
+        margin: 0 10px 10px 0;
+    }
+
+    .flex-container {
+        align-items: stretch;
+    }
+
+    .flex-container2 {
+        align-items: flex-start;
+    }
+
+    .flex-container3 {
+        align-items: flex-end;
+    }
+
+    .flex-container4 {
+        align-items: baseline;
+    }
+
+    .flex-container5 {
+        align-items: center;
+    }
+
+    .flex-container5 .item:nth-child(3){
+        justify-content: right;
+    }
+
+    .flex-container-jc {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .flex-container-jc2 {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .flex-container-jc3 {
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .flex-container-jc4 {
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title"><a href="justify-content.html" style="color: red;">justify-content için hazırlanmış sayfaya
+                gitmeyi unutma!</a></h2>
+
+        <h2>flex-container classına height 300px pixel verdim. Bu flex-container flex-direction: row ile düzenlenmiştir
+            istersen column ile de deneyebilirsin.</h2>
+
+        <h2 class="title">align-items: stretch; - Özelliği -> Default</h2>
+        <div class="fc flex-container">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">align-items: flex-start; - Özelliği</h2>
+        <div class="fc flex-container2">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">align-items: flex-end; - Özelliği</h2>
+        <div class="fc flex-container3">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">align-items: baseline; - Özelliği</h2>
+        <div class="fc flex-container4">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">align-items: center; - Özelliği</h2>
+        <div class="fc flex-container5">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">HATIRLATMA: Bu align-items özelliğini justify-content ile beraber kullanabilirsin.</h2>
+
+        <h2 class="title">align-items: flex-start; ve justify-content: center; - Kullanarak sonuca ulaştık</h2>
+        <div class="fc flex-container-jc">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">align-items: flex-end ve justify-content: center; - Kullanarak sonuca ulaştık</h2>
+        <div class="fc flex-container-jc2">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">align-items: flex-end ve justify-content: center; - Kullanarak sonuca ulaştık</h2>
+        <div class="fc flex-container-jc2">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">Dikey de kullanma</h2>
+
+        <h2 class="title">align-items: flex-end ve justify-content: center; ve flex-direction: column; - Kullanarak
+            sonuca ulaştık</h2>
+        <div class="fc flex-container-jc3">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+        <h2 class="title">align-items: flex-start ve justify-content: center; ve flex-direction: column; Kullanarak
+            sonuca ulaştık</h2>
+        <div class="fc flex-container-jc4">
+            <div class="item">iTem 1</div>
+            <div class="item">iTem 2</div>
+            <div class="item">iTem 3</div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

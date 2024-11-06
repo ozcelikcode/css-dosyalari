@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Card</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .nav {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid black;
+            overflow: hidden;
+            background: #333;
+        }
+
+        .nav-container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .nav a {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .menu a:nth-child(1),
+        .menu a:nth-child(2) {
+            margin-right: 15px;
+        }
+
+        .menu a {
+            padding: 20px;
+            transition: background-color 0.25s ease;
+        }
+
+        .menu {
+            float: right;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            width: 70%;
+            margin: 30px auto;
+            height: 500px;
+            background: linear-gradient(rgb(37, 186, 227), rgb(33, 124, 166), rgb(22, 92, 136));
+            border-radius: 12px;
+        }
+
+        .grid div {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-store-img{
+            background-image: url("img/app-store2.png");
+            height: 85%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .title{
+            text-align: right;
+            margin: 100px 80px;
+            font-size: 115px;
+            font-weight: 500;
+            color: #fff;
+        }
+    </style>
+
+    <div class="nav">
+
+        <div class="nav-container">
+            <a href="#">Apple</a>
+            <div class="menu">
+                <a href="#">iPhone</a>
+                <a href="#">Mac</a>
+                <a href="#">Menu 3</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid">
+        <div class="item">
+            <div class="app-store-img"></div>
+        </div>
+        <div class="item">
+            <h1 class="title">İşte Karşınızda App Store.</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: royalblue;
+        }
+
+        .container2 {
+            float: right;
+        }
+
+        .box2 {
+            display: block; /* varsayılan olarak block zaten, yazmasanda olur */
+            width: 100px;
+            height: 100px;
+            margin-bottom: 5px;
+            background: royalblue;
+        }
+    </style>
+
+    <h3>Container'a text-align center, box'a da display inline yada inline-block verirsen text-align çalışır. Fakat display inline vermezsen çalışmaz</h3>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <br><br><br>
+
+    <h3>Eğer Nesne Display block ise bu nesneye kesinlikle float değeri vermen gerekir. Text align hiçbir işe yaramaz. Tabii box'a float verirsen display inline değerinin aynısı olur</h3>
+
+    <div class="container2">
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+
+</body>
+
+</html>

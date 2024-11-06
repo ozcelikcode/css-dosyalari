@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özgüllük - Tam Olarak NE BENDE BİLMİYORUM</title>
+</head>
+<body>
+    
+    <style>
+        #deneme a.buton{ /* en güçsüz özgül */
+            background-color: #000;
+        }
+
+        .deneme-2 a.buton{ /* orta güçlü özgül */
+            background-color: red;
+        }
+
+        #deneme .deneme-2 a.buton{ /* en güçlü özgül */
+            background-color: aquamarine;
+        }
+
+        /* !important kullanırsak ne OLUR?! */
+        #deneme a.buton{
+            background-color: #000 !important; /* bunun sayesinde CSS, bu important kodunu gördüğü için önceliği buna verecektir! */
+        }
+    </style>
+
+    <div id="deneme">
+        <span class="deneme-2">
+            <a href="javascript:void;" class="buton">Bana Tıkla!</a>
+        </span>
+    </div>
+
+</body>
+</html>

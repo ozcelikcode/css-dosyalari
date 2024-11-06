@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p{ /* div içindeki tüm paragrafları içine alır */
+            background: orange;
+        }
+
+        div > p::after{ /* bilgi */
+            content: " - div > p : Seçilen";
+        }
+
+        div ~ p{ /* divin dışındaki tüm paragrafları içine alır */
+            background: royalblue;
+        }
+
+        div ~ p::after{ /* bilgi */
+            content: " - div ~ p : Seçilen";
+        }
+
+        div + p{ /* divin dışındaki ilk pararafı içine alır */
+            border: 2px solid black;
+        }
+    </style>
+    
+    <p>Divin yukarısındaki paragraf</p>
+    <div>
+        <p>div içindeki 1. paragraf</p>
+        <p>div içindeki 2. paragraf</p>
+        <p>div içindeki 3. paragraf</p>
+        <section>
+            <p>Div > Section içerisindeki paragraf</p>
+        </section>
+    </div>
+    <p>div dışındaki 4. paragraf ve div + p seçilen paragraf</p>
+    <p>div dışındaki 5. paragraf</p>
+
+    <br><br>
+
+    <h3>Daha detaylı bilgi için dosyayı inceleyiniz</h3>
+
+</body>
+</html>

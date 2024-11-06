@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Overflow Kullanımı</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box div {
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .ornek-box{
+            border: 1px solid white;
+            width: 400px;
+            overflow: hidden;
+            white-space: nowrap; 
+        }
+
+        .ornek-1{
+            text-overflow: clip;
+        }
+
+        .ornek-2{
+            text-overflow: ellipsis;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+
+            <p><b>text-overflow</b> özelliği, dışa kayan yazıyı gizleme işlemidir.</p>
+
+            <b>normal metin</b> <div>Mardinde freni patlayan tırın şoförü tutuklandı.</div>
+            
+            <br>
+
+            <b>text-overflow : clip</b> = <b>Sonuna bir şey eklemez ve dışta kalan yazı gizlenir.</b> <div class="ornek-box ornek-1">Mardinde freni patlayan tırın şoförü tutuklandı.</div>
+            
+            <br>
+
+            <b>text-overflow : ellipsis</b> = <b>Sonuna 3 nokta (...) eklenir</b> <div class="ornek-box ornek-2">Mardinde freni patlayan tırın şoförü tutuklandı.</div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

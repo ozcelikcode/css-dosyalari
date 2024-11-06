@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Attachment - Uygulama</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .mountain {
+            background-image: url("img/mountain.jpg");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .h1-title {
+            font-size: 42px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #000;
+            padding: 10px;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+
+        .container-text {
+            width: 50%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .title2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            font-size: 18px;
+        }
+
+        .flower {
+            background-image: url("img/flower.jpg");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .h1-title2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #000;
+            padding: 10px;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+
+        .mountain2 {
+            background: linear-gradient(to bottom, rgba(107, 133, 221, 0.375), rgba(107, 134, 221, 0.375)), url("img/mountain2.jpg");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .h1-title3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #000;
+            padding: 10px;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+    </style>
+
+
+    <div class="mountain">
+        <h1 class="h1-title">Mountain</h1>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <div class="container-text">
+        <h1 class="title2">Mountain Info</h1>
+        <p class="info">
+            Evet gördüğün üzere bu sayfayı tamamen ben tasarladım. Biraz uğraşsam da başardım ve bence güzel de oldu.
+            <br> Tarih: 02.07.2022 Yazıldı
+        </p>
+    </div>
+
+
+    <div class="flower">
+        <h1 class="h1-title2">Flower</h1>
+    </div>
+
+    <div class="container-text">
+        <h1 class="title2">Flower Info</h1>
+        <p class="info">
+            Bu da ikinci örnek olsun dedim bunu yaparken baya da hata yaptım. Ama hallettim tabii hatam çok komik bir
+            hata. Position: absolute verip arkasındaki nesneye position relative vermeyerek büyük bir hata ettim daha
+            sonra hatamı anladım ve düzelttim :D
+        </p>
+    </div>
+
+    <br>
+
+    <div class="mountain2">
+        <h1 class="h1-title3">Mountain 2</h1>
+    </div>
+
+    <div class="container-text">
+        <h1 class="title2">Mountain 2 Info</h1>
+        <p class="info">
+            üstteki resim de linear gradient kullandım. Bu sayfanın kodları incele. - background: linear-gradient(renk,
+            renk) url("resimadresi"); - şeklinde ilk satırda belitmen gerekir sonra background-attachment, background-position vs. gibi özellikleri gir.
+        </p>
+    </div>
+
+    <br>
+
+</body>
+
+</html>

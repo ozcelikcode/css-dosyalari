@@ -1,0 +1,88 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url("base.css");
+@import url("buttons.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-header {
+    background-color: #333;
+    padding: .8rem 1.6rem;
+}
+
+.main-nav {
+    display: inline-block;
+    width: calc(100% - 10rem);
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.main-header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+
+.main-header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-nav__item:last-child {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .main-nav__item {
+        display: none;
+    }
+
+    .main-nav__item:last-child {
+        display: block;
+    }
+
+    .responsive .main-nav__item {
+        display: block;
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    .responsive .main-nav__item:last-child {
+        position: absolute;
+        right: 40px;
+        top: 6px;
+    }
+
+    .responsive .main-nav {
+        display: block;
+    }
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-nav__item a:hover, .main-nav__item:hover::before {
+    color: #2E4C6D;
+}      
+
+.main-nav__item:active::before, .main-nav__item a:active {
+    color: #fff;
+}

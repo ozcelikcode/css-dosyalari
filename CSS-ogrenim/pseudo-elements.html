@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elements</title>
+</head>
+
+<body>
+
+    <style>
+
+        p::first-line{ /* paragraftaki ilk satırı seçer */
+            color: red;
+        }
+
+        p::first-letter{ /* paragrafın başındaki ilk harfi seçer */
+            font-size: 36px;
+        }
+
+        p::after{ /* paragraf sonuna veya sonrasına yazı ekle */
+            content: " - Paragraf Sonudur ve burası mouse ile seçilemez";
+            color: seagreen;
+        }
+
+        ::selection{ /* mouse ile sol tıkla seçtiğin arka planın rengi */
+            background: violet;
+        }
+
+    </style>
+
+    <p>
+        Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir
+        matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri
+        endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı
+        zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset
+        yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü
+        yayıncılık yazılımları ile popüler olmuştur.
+    </p>
+
+</body>
+
+</html>

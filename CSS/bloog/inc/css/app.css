@@ -1,0 +1,158 @@
+body{
+    background-color: #d8d9da;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.an{
+    color: #000;
+    text-decoration: none;
+}
+
+.an:hover{
+    text-decoration: underline;
+}
+
+.an:focus{
+    text-decoration-color: rgb(173, 72, 62);
+}
+
+.width{
+    margin: 30px auto;
+    width: 1200px;
+    height: auto;
+}
+
+.header{
+    width: auto;
+    background: #FFF;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo{
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 70% auto;
+}
+
+.article{
+    margin-right: 20px;
+}
+
+.box{
+    background: #FFF;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.box-grid{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 35% auto;
+}
+
+.box-grid .box-img img{
+    width: 100%;
+}
+
+.box-tt{
+    margin: 10px 0px 0px 20px;
+}
+
+.btitle{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.barticle{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar{}
+
+.box-s{
+    background: #FFF;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+}
+
+.box-s input[type="search"]{
+    padding: 10px;
+    width: 90%;
+    margin: 0px auto;
+    background: rgb(207, 206, 206);
+    border: 1px solid rgb(151, 149, 149);
+}
+
+.box-s input[type="search"]:focus{
+    outline: none;
+}
+
+.footer{
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* p.html */
+
+.pimg{
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+}
+
+.pimg img{
+    width: 70%;
+    display: block;
+    margin: 0px auto;
+}
+
+.ptitle{
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.particle{
+    width: auto;
+    padding: 0px 20px 20px 20px;
+}
+
+.ptags{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tags{
+    width: 90%;
+}
+
+.tag-button{
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 12px;
+    background-color: #1675d4;
+}
