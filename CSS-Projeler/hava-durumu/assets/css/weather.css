@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #00bfff, #00ffff);
+}
+
+p a{
+color: #000;
+transition: background-color .25s ease;
+}
+
+p a:hover{
+  background-color: #fff;
+  text-decoration: none;
+}
+
+nav{
+  position: fixed;
+  min-height: 60px;
+  max-height: auto;
+  top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 0 30px;
+  max-width: 90%;
+  border-radius: 50px;
+  gap: 10px;
+  animation: navAnimation .50s ease 0s 1 normal forwards;
+}
+
+nav .logo{
+  font-size: 26px;
+  font-weight: 200;
+}
+
+.creator-text{
+  position: absolute;
+  bottom: 20px;
+  color: #000;
+  text-align: center;
+}
+
+.container {
+  max-width: 90%;
+  padding: 80px 70px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#input {
+  max-width: 80%;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 50px 0 0 50px;
+  border: 2px solid #0dcaf0;
+  transition: outline 75ms ease;
+}
+
+#input:focus{
+  outline: 3px solid #0dcaf0;
+  border: 2px solid #80e6fa;
+}
+
+.submit-btn {
+  max-width: 100%;
+  color: #333;
+  background-color: #0dcaf0;
+  border: 2px solid #0dcaf0;
+  border-radius: 0 50px 50px 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  transition: outline 75ms ease;
+}
+
+.submit-btn:hover{
+  background-color: #2fc3e0;
+}
+
+.submit-btn i{
+  color: #fff;
+}
+
+.submit-btn:focus{
+  outline: 3px solid #68e3fc;
+}
+
+.form-flex{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.form-flex div{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-flex div:nth-child(1), div:nth-child(3){
+  flex-grow: 1;
+}
+
+.form-flex div:nth-child(2){
+  flex-grow: 3;
+}
+
+#countryName{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#countryName:before{
+  font-family: "Font Awesome 6 Free";
+  content: "\f3c5";
+  font-weight: 900;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+#temp{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#temp::before{
+  font-family: "Font Awesome 6 Free";
+  content: "\f2c8"; /* Unicode değeri */
+  font-weight: 900;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+#iconContainer,
+#countryName,
+#temp {
+  display: none;
+}
+
+.input-flex{
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+@keyframes navAnimation {
+	0% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(90px);
+	}
+}
